@@ -72,8 +72,8 @@
                                         Stay updated with market insights. Join our community on Telegram.
                                         </p>
                                         <div class="d-flex justify-content-center flex-shrink-0 mb-4">
-										<button onclick="showConfirmation('https://t.me/hypertradeSB')" class="btn" id="joinBtn"> Join Telegram </button>
-                                           
+										<!-- <button onclick="showConfirmation('https://t.me/hypertradeSB')" class="btn" id="joinBtn"> Join Telegram </button> -->
+                                           <button onclick="openModal('https://t.me/hypertradeSB')" class="btn" id="joinBtn"> Join Telegram </button>
                                         </div>
                                        
                                     </div>
@@ -96,7 +96,8 @@
                                         Stay updated with market insights. Join our community on Telegram.
                                         </p>
                                         <div class="d-flex justify-content-center flex-shrink-0 mb-4">
-										<button onclick="showConfirmation('https://t.me/hypertradeSB')" class="btn" id="joinBtn"> Join Telegram </button>
+										<!-- <button onclick="showConfirmation('https://t.me/hypertradeSB')" class="btn" id="joinBtn"> Join Telegram </button> -->
+										<button onclick="openModal('https://t.me/hypertradeSB')" class="btn" id="joinBtn"> Join Telegram </button>
                                            
                                         </div>
                                        
@@ -319,7 +320,16 @@
         </div>
         <!-- Copyright End -->
 
-      
+         <!-- Custom Modal -->
+    <div id="confirmationModal" class="modal">
+        <div class="modal-content">
+            <p>You are being redirected to an external messaging platform. Do you want to continue?</p>
+            <div class="modal-buttons">
+                <button class="modal-button confirm-button" onclick="redirect()">Yes</button>
+                <button class="modal-button cancel-button" onclick="closeModal()">No</button>
+            </div>
+        </div>
+    </div>
         <!-- Back to Top -->
         <a href="#" class="btn btn-primary btn-lg-square rounded-circle back-to-top"><i class="fa fa-arrow-up"></i></a>   
 
@@ -336,19 +346,20 @@
 		
 		 <script>
 		let redirectUrl = "";
-        function showConfirmation(url) {
+        
+        function openModal(url) {
             redirectUrl = url;
-            window.open(redirectUrl, "_blank");
-            closeConfirmation();
+            document.getElementById('confirmationModal').style.display = 'flex';
         }
-        <!-- function redirect() { -->
-            <!-- window.open(redirectUrl, "_blank"); -->
-            <!-- closeConfirmation(); -->
-        <!-- } -->
-        <!-- function closeConfirmation() { -->
-            <!-- document.getElementById("confirmationBox").style.display = "none"; -->
-        <!-- } -->
 
+        function closeModal() {
+            document.getElementById('confirmationModal').style.display = 'none';
+        }
+
+        function redirect() {
+           
+			window.open(redirectUrl, "_blank");
+        }
 		</script>
     </body>
 
