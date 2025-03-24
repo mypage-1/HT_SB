@@ -954,12 +954,12 @@
         }
 
         .confirm-button {
-            background: #238636;
+            background: green;
             color: white;
         }
 
         .cancel-button {
-            background: #d73a49;
+            background: red;
             color: white;
         }
 
