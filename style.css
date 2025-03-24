@@ -968,3 +968,10 @@
             .subheading { font-size: 1.2rem; }
             .icon { width: 60px; height: 60px; }
         }
+.circular-img {
+            width: 70px;  
+            height: 150px;
+            border-radius: 80%;
+            object-fit: cover; 
+            border: 2px solid white; 
+        }
