@@ -340,6 +340,7 @@
         left: 50%;
         transform: translateX(-50%);
         margin-left: -45px;
+		display:none;
     }
 
 
@@ -347,6 +348,7 @@
         left: 50%;
         transform: translateX(-50%);
         margin-left: 45px;
+		display:none;
     }
 }
 
@@ -968,7 +970,8 @@
             .subheading { font-size: 1.2rem; }
             .icon { width: 60px; height: 60px; }
         }
-.circular-img {
+		
+		.circular-img {
             width: 70px;  
             height: 150px;
             border-radius: 80%;
